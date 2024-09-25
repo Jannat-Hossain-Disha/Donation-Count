@@ -32,7 +32,7 @@
   <body class="lexend">
     <nav>
       <div
-        class="lg:flex lg:justify-between px-6 lg:px-36 py-6 bg-[#FDD835] bg-opacity-15"
+        class="flex justify-between items-center px-6 lg:px-36 py-6 bg-[#FDD835] bg-opacity-15"
       >
         <!-- navbar button -->
         <div>
@@ -46,7 +46,9 @@
         <!-- navbar headline -->
         <div class="flex items-center my-8 lg:my-0">
           <img src="assets/logo.png" alt="" />
-          <h1 class="font-semibold text-xl pl-4">Donate Bangladesh</h1>
+          <h1 class="font-semibold text-xl pl-4 hidden lg:block">
+            Donate Bangladesh
+          </h1>
         </div>
         <!-- navbar amount -->
         <div class="flex items-center">
@@ -65,7 +67,7 @@
           <h3 class="font-semibold text-xl">
             What is the Document Object Model (DOM)?
           </h3>
-          <button><i class="fa">&#xf078;</i></button>
+          <button><i id="down-arrow" class="fa">&#xf078;</i></button>
         </div>
 
         <!-- Answer  -->

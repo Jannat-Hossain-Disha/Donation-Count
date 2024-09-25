@@ -4,3 +4,4 @@ document.getElementById("blog").addEventListener('click',function(event){
     console.log("clicked");
     window.location.href='/blog.html';
 })
+

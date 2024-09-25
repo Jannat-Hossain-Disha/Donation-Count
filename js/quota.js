@@ -9,14 +9,14 @@ document.getElementById("quota-donation").addEventListener('click',function(even
     const quotaDonation=document.getElementById("quota-input").value;
     const quotaDonationNumber=parseFloat(quotaDonation);
 
-    if(quotaDonationNumber<0)
-      {
-        alert("Invalid Input");
-        return;
-      }
-      else if(quotaDonationNumber>=0)
-          document.getElementById("alert-card").classList.remove("hidden"); // Show alert
-
+    if(isNaN(quotaDonationNumber) || quotaDonationNumber<0)
+    {
+     alert("Invalid Input");
+      document.getElementById("quota-input").value='';
+      return;
+    }
+    document.getElementById("alert-card").classList.remove("hidden");
+    
     const quotaAmount=document.getElementById("q-amount").innerText;
     var quotaAmountNumber=parseFloat(quotaAmount);
 

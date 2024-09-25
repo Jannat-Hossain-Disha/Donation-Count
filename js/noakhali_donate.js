@@ -10,13 +10,19 @@ document.getElementById("noakhali-donation").addEventListener('click',function(e
     const noakhaliDonation=document.getElementById("noakhali-input").value;
     const noakhaliDonationNumber=parseFloat(noakhaliDonation);
 
-    if(noakhaliDonationNumber<0)
-      {
-        alert("Invalid Input");
-        return;
-      }
-      else if(noakhaliDonationNumber>=0)
-          document.getElementById("alert-card").classList.remove("hidden");
+    // if(noakhaliDonationNumber<0)
+    // {
+    //   alert("Invalid Input");
+    //   document.getElementById("noakhali-input").value='';
+    //   return;
+    // }
+    if(isNaN(noakhaliDonationNumber) || noakhaliDonationNumber<0)
+    {
+      alert("Invalid Input");
+      document.getElementById("noakhali-input").value='';
+      return;
+    }
+    document.getElementById("alert-card").classList.remove("hidden");
 
     const noakhaliAmount=document.getElementById("n-amount").innerText;
     var noakhaliAmountNumber=parseFloat(noakhaliAmount);

@@ -9,13 +9,13 @@ document.getElementById("feni-donation").addEventListener('click',function(event
     const feniDonation=document.getElementById("feni-input").value;
     const feniDonationNumber=parseFloat(feniDonation);
 
-    if(feniDonationNumber<0)
-      {
-        alert("Invalid Input");
-        return;
-      }
-      else if(feniDonationNumber>=0)
-          document.getElementById("alert-card").classList.remove("hidden"); // Show alert
+    if(isNaN(feniDonationNumber) || feniDonationNumber<0)
+    {
+      alert("Invalid Input");
+      document.getElementById("noakhali-input").value='';
+      return;
+    }
+    document.getElementById("alert-card").classList.remove("hidden");
 
     const feniAmount=document.getElementById("f-amount").innerText;
     var feniAmountNumber=parseFloat(feniAmount);

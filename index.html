@@ -28,7 +28,7 @@
   <body class="lexend">
     <nav class="sticky top-0 z-50 bg-white bg-opacity-80">
       <div
-        class="lg:flex lg:justify-between px-6 lg:px-36 py-6 bg-[#FDD835] bg-opacity-15"
+        class="flex justify-between items-center px-6 lg:px-36 py-6 bg-[#FDD835] bg-opacity-15"
       >
         <!-- navbar button -->
         <div>
@@ -42,7 +42,9 @@
         <!-- navbar headline -->
         <div class="flex items-center my-8 lg:my-0">
           <img src="assets/logo.png" alt="" />
-          <h1 class="font-semibold text-xl pl-4">Donate Bangladesh</h1>
+          <h1 class="font-semibold text-xl pl-4 hidden lg:block">
+            Donate Bangladesh
+          </h1>
         </div>
         <!-- navbar amount -->
         <div class="flex items-center">
@@ -134,7 +136,7 @@
             </p>
             <input
               id="feni-input"
-              type="number"
+              type="text"
               placeholder="Write Donation Amount"
               class="p-5 border rounded-xl"
             />
@@ -173,7 +175,7 @@
             </p>
             <input
               id="quota-input"
-              type="number"
+              type="text"
               placeholder="Write Donation Amount"
               class="p-5 border rounded-xl"
             />
@@ -207,11 +209,10 @@
     </div>
     <script src="js/blog.js"></script>
     <script src="js/index.js"></script>
-    <!-- <script src="js/alert.js"></script> -->
     <script src="js/noakhali_donate.js"></script>
     <script src="js/feni_donate.js"></script>
     <script src="js/quota.js"></script>
     <script src="js/function.js"></script>
-    <script src="js/switch.js"></script>
+    <script src="js/switch-buttons.js"></script>
   </body>
 </html>
