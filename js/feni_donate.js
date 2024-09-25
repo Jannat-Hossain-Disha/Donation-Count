@@ -12,7 +12,7 @@ document.getElementById("feni-donation").addEventListener('click',function(event
     if(isNaN(feniDonationNumber) || feniDonationNumber<0)
     {
       alert("Invalid Input");
-      document.getElementById("noakhali-input").value='';
+      document.getElementById("feni-input").value='';
       return;
     }
     document.getElementById("alert-card").classList.remove("hidden");
