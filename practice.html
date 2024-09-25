@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Font Setup -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .lexend {
+        font-family: "Lexend", sans-serif;
+      }
+    </style>
+
+    <!-- Tailwind Setup -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Home Page</title>
+  </head>
+  <body class="lexend text-center">
+    <!-- Hidden Alert Box -->
+    <div
+      id="alert-card"
+      class="card shadow-xl text-center fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 items-center p-8 bg-white hidden"
+    >
+      <h1 class="font-bold text-4xl">Congrats!</h1>
+      <div class="items-center my-4">
+        <img class="w-12" src="assets/coin.png" alt="Coin Image" />
+      </div>
+      <p>You Have Donated for Humankind</p>
+      <h2 class="font-bold text-xl m-4">Successfully</h2>
+      <button id="close-alert-btn" class="btn">Close Confirmation</button>
+    </div>
+    <script src="js/alert.js"></script>
+  </body>
+</html>

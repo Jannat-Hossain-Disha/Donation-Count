@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- font setup -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .lexend {
+        font-family: "Lexend", sans-serif;
+      }
+    </style>
+    <!-- icon setup -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- Tailwind Setup -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Blog Page</title>
+  </head>
+  <body class="lexend">
+    <nav>
+      <div
+        class="lg:flex lg:justify-between px-6 lg:px-36 py-6 bg-[#FDD835] bg-opacity-15"
+      >
+        <!-- navbar button -->
+        <div>
+          <button
+            id="home"
+            class="btn bg-[#B4F461] rounder-8 px-8 font-semibold text-xl items-center text-center"
+          >
+            Home
+          </button>
+        </div>
+        <!-- navbar headline -->
+        <div class="flex items-center my-8 lg:my-0">
+          <img src="assets/logo.png" alt="" />
+          <h1 class="font-semibold text-xl pl-4">Donate Bangladesh</h1>
+        </div>
+        <!-- navbar amount -->
+        <div class="flex items-center">
+          <img src="assets/coin.png" alt="" />
+          <h1 class="font-semibold text-xl pl-4">
+            <span id="main-balance">5500</span> BDT
+          </h1>
+        </div>
+      </div>
+    </nav>
+    <h1 class="font-bold text-4xl mx-6 lg:mx-36 mt-24 p-4">Important FAQ</h1>
+    <section class="">
+      <div class="card mx-6 lg:mx-36 shadow-xl p-8 rounded-2xl">
+        <!-- Question -->
+        <div class="flex justify-between" id="question1">
+          <h3 class="font-semibold text-xl">
+            What is the Document Object Model (DOM)?
+          </h3>
+          <button><i class="fa">&#xf078;</i></button>
+        </div>
+
+        <!-- Answer  -->
+        <div id="answer1" class="hidden pt-2">
+          The Document Object Model (DOM) is a programming interface for web
+          documents. It represents the structure of a web page as a tree of
+          objects, where each part of the document (such as elements,
+          attributes, and text) is represented as a node. This structure allows
+          programming languages, like JavaScript, to interact with and
+          manipulate the content, structure, and style of a webpage dynamically.
+        </div>
+      </div>
+      <div class="card mx-6 lg:mx-36 shadow-xl p-8 rounded-2xl">
+        <!-- Question -->
+        <div class="flex justify-between" id="question2">
+          <h3 class="font-semibold text-xl">
+            How do you select an element from the DOM?
+          </h3>
+          <button><i class="fa">&#xf078;</i></button>
+        </div>
+
+        <!-- Answer  -->
+        <div id="answer2" class="hidden pt-2">
+          We can select an element from the DOM using various methods provided
+          by the Document Object Model (DOM) API. These methods allow us to
+          target elements by their tag name, class, ID, or other attributes.
+        </div>
+      </div>
+      <div class="card mx-6 lg:mx-36 shadow-xl p-8 rounded-2xl">
+        <!-- Question -->
+        <div class="flex justify-between" id="question3">
+          <h3 class="font-semibold text-xl">
+            What is event delegation in the context of the DOM, and why is it
+            useful?
+          </h3>
+          <button><i class="fa">&#xf078;</i></button>
+        </div>
+
+        <!-- Answer  -->
+        <div id="answer3" class="hidden pt-2">
+          <p>
+            Event delegation is a technique in the DOM that allows you to handle
+            events more efficiently by using a single event listener on a parent
+            element rather than attaching separate event listeners to each child
+            element. The core idea is that events triggered by child elements
+            "bubble up" to their parent elements, so you can capture those
+            events at a higher level in the DOM.
+          </p>
+          <p>
+            Event delegation improves efficiency by using one event listener on
+            a parent element to handle events for multiple children, including
+            dynamically added ones, simplifying and reducing the amount of code.
+          </p>
+        </div>
+      </div>
+      <div class="card mx-6 lg:mx-36 shadow-xl p-8 rounded-2xl">
+        <!-- Question -->
+        <div class="flex justify-between" id="question4">
+          <h3 class="font-semibold text-xl">
+            How do you manipulate an elements attributes and styles using the
+            DOM?
+          </h3>
+          <button><i class="fa">&#xf078;</i></button>
+        </div>
+
+        <!-- Answer  -->
+        <div id="answer4" class="hidden pt-2">
+          We can manipulate an element's attributes and styles using the DOM by
+          employing methods such as getAttribute(), setAttribute(), and
+          removeAttribute() for attributes, and accessing the style property for
+          styles. Use element.style.property to set specific CSS properties, or
+          element.style.cssText to apply multiple styles at once. To remove a
+          style, set the corresponding property to an empty string.
+        </div>
+      </div>
+    </section>
+    <script src="js/answer.js"></script>
+    <script src="js/blog.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>

@@ -9,6 +9,14 @@ document.getElementById("feni-donation").addEventListener('click',function(event
     const feniDonation=document.getElementById("feni-input").value;
     const feniDonationNumber=parseFloat(feniDonation);
 
+    if(feniDonationNumber<0)
+      {
+        alert("Invalid Input");
+        return;
+      }
+      else if(feniDonationNumber>=0)
+          document.getElementById("alert-card").classList.remove("hidden"); // Show alert
+
     const feniAmount=document.getElementById("f-amount").innerText;
     var feniAmountNumber=parseFloat(feniAmount);
 
@@ -18,4 +26,20 @@ document.getElementById("feni-donation").addEventListener('click',function(event
 
     mainBalanceNumber+=feniDonationNumber;
     document.getElementById("main-balance").innerText=mainBalanceNumber;
+
+    // History Input
+    const today=new Date();
+    const div=document.createElement('div');
+    div.innerHTML=`<div class="card mx-6 lg:mx-36 shadow-2xl p-8">
+        <h2 class="font-bold text-xl mt-8">
+          ${feniDonationNumber} is donated for Flood Relief in Feni,Bangladesh
+        </h2>
+        <p class="mt-4">${today}</p>
+      </div>`
+    document.getElementById('history-container').appendChild(div);
 })
+// Close the alert when the close button is clicked
+document.getElementById("close-alert-btn").addEventListener("click", function(event) {
+  event.preventDefault();
+  document.getElementById("alert-card").classList.add("hidden"); // Hide alert
+});
